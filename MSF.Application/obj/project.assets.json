@@ -2889,7 +2889,7 @@
       ]
     },
     "System.Collections.Specialized/4.3.0": {
-      "sha512": "Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
+      "sha512": "NoPBj0ykejqAWW4p4gGtrrL+3c84ZLSvGnHgq422ew1Rj4WKj1FA8/BCybqC111EtgcqUl6ZJNFYYS22HLgbjA==",
       "type": "package",
       "path": "system.collections.specialized/4.3.0",
       "files": [
@@ -4764,7 +4764,7 @@
       ]
     },
     "System.Runtime.Serialization.Primitives/4.3.0": {
-      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
+      "sha512": "2Z5t70a2SwMsfQDp9KOclaZNyQhfIga2gppq9lIUDM1A4ohTshn4JqT7ir8bvIhXgorWKYDAr6rPzEbi/nTGKg==",
       "type": "package",
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
@@ -5868,37 +5868,35 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nsankaradeva\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/navani/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Application\\MSF.Application.csproj",
+      "projectUniqueName": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Application/MSF.Application.csproj",
       "projectName": "MSF.Application",
-      "projectPath": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Application\\MSF.Application.csproj",
-      "packagesPath": "C:\\Users\\Nsankaradeva\\.nuget\\packages\\",
-      "outputPath": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Application\\obj\\",
+      "projectPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Application/MSF.Application.csproj",
+      "packagesPath": "/Users/navani/.nuget/packages/",
+      "outputPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Application/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Nsankaradeva\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/navani/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Domain\\MSF.Domain.csproj": {
-              "projectPath": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Domain\\MSF.Domain.csproj"
+            "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/MSF.Domain.csproj": {
+              "projectPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/MSF.Domain.csproj"
             }
           }
         }
@@ -5940,7 +5938,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
       }
     }
   }

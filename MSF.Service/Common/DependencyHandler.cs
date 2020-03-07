@@ -1,10 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using System;
 using System.Linq;
 using System.Reflection;
-using MSF.Application;
-using Microsoft.Extensions.Configuration;
 using System.Runtime.Loader;
-using System;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace MSF.Service
 {

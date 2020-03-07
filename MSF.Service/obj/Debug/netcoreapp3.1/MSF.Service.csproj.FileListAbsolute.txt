@@ -1,0 +1,13 @@
+/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Service/bin/Debug/netcoreapp3.1/MSF.Service.deps.json
+/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Service/bin/Debug/netcoreapp3.1/MSF.Service.dll
+/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Service/bin/Debug/netcoreapp3.1/MSF.Service.pdb
+/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Service/bin/Debug/netcoreapp3.1/MSF.Application.dll
+/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Service/bin/Debug/netcoreapp3.1/MSF.Domain.dll
+/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Service/bin/Debug/netcoreapp3.1/MSF.Domain.pdb
+/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Service/bin/Debug/netcoreapp3.1/MSF.Application.pdb
+/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Service/obj/Debug/netcoreapp3.1/MSF.Service.csprojAssemblyReference.cache
+/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Service/obj/Debug/netcoreapp3.1/MSF.Service.AssemblyInfoInputs.cache
+/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Service/obj/Debug/netcoreapp3.1/MSF.Service.AssemblyInfo.cs
+/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Service/obj/Debug/netcoreapp3.1/MSF.Service.csproj.CopyComplete
+/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Service/obj/Debug/netcoreapp3.1/MSF.Service.dll
+/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Service/obj/Debug/netcoreapp3.1/MSF.Service.pdb

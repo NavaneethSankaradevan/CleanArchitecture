@@ -1,30 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.UI\\MSF.UI.csproj": {}
+    "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.UI/MSF.UI.csproj": {}
   },
   "projects": {
-    "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.UI\\MSF.UI.csproj": {
+    "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.UI/MSF.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.UI\\MSF.UI.csproj",
+        "projectUniqueName": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.UI/MSF.UI.csproj",
         "projectName": "MSF.UI",
-        "projectPath": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.UI\\MSF.UI.csproj",
-        "packagesPath": "C:\\Users\\Nsankaradeva\\.nuget\\packages\\",
-        "outputPath": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.UI\\obj\\",
+        "projectPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.UI/MSF.UI.csproj",
+        "packagesPath": "/Users/navani/.nuget/packages/",
+        "outputPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.UI/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Nsankaradeva\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/navani/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -64,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
         }
       }
     }

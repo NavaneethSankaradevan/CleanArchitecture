@@ -1,30 +1,99 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\NUnitTest\\NUnitTest.Service.csproj": {}
+    "/Users/navani/Projects/GitHub/CleanArchitecture/NUnitTest/NUnitTest.Service.csproj": {}
   },
   "projects": {
-    "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Domain\\MSF.Domain.csproj": {
+    "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Application/MSF.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Domain\\MSF.Domain.csproj",
-        "projectName": "MSF.Domain",
-        "projectPath": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Domain\\MSF.Domain.csproj",
-        "packagesPath": "C:\\Users\\Nsankaradeva\\.nuget\\packages\\",
-        "outputPath": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Domain\\obj\\",
+        "projectUniqueName": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Application/MSF.Application.csproj",
+        "projectName": "MSF.Application",
+        "projectPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Application/MSF.Application.csproj",
+        "packagesPath": "/Users/navani/.nuget/packages/",
+        "outputPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Application/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Nsankaradeva\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/navani/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/MSF.Domain.csproj": {
+                "projectPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/MSF.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/MSF.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/MSF.Domain.csproj",
+        "projectName": "MSF.Domain",
+        "projectPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/MSF.Domain.csproj",
+        "packagesPath": "/Users/navani/.nuget/packages/",
+        "outputPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/navani/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,41 +138,39 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Service\\MSF.Service.csproj": {
+    "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Service/MSF.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Service\\MSF.Service.csproj",
+        "projectUniqueName": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Service/MSF.Service.csproj",
         "projectName": "MSF.Service",
-        "projectPath": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Service\\MSF.Service.csproj",
-        "packagesPath": "C:\\Users\\Nsankaradeva\\.nuget\\packages\\",
-        "outputPath": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Service\\obj\\",
+        "projectPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Service/MSF.Service.csproj",
+        "packagesPath": "/Users/navani/.nuget/packages/",
+        "outputPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Service/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Nsankaradeva\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/navani/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Domain\\MSF.Domain.csproj": {
-                "projectPath": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Domain\\MSF.Domain.csproj"
+              "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Application/MSF.Application.csproj": {
+                "projectPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Application/MSF.Application.csproj"
               },
-              "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Repo\\MSF.Application.csproj": {
-                "projectPath": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Repo\\MSF.Application.csproj"
+              "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/MSF.Domain.csproj": {
+                "projectPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/MSF.Domain.csproj"
               }
             }
           }
@@ -141,44 +208,42 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\NUnitTest\\NUnitTest.Service.csproj": {
+    "/Users/navani/Projects/GitHub/CleanArchitecture/NUnitTest/NUnitTest.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\NUnitTest\\NUnitTest.Service.csproj",
+        "projectUniqueName": "/Users/navani/Projects/GitHub/CleanArchitecture/NUnitTest/NUnitTest.Service.csproj",
         "projectName": "MSF.UnitTest",
-        "projectPath": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\NUnitTest\\NUnitTest.Service.csproj",
-        "packagesPath": "C:\\Users\\Nsankaradeva\\.nuget\\packages\\",
-        "outputPath": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\NUnitTest\\obj\\",
+        "projectPath": "/Users/navani/Projects/GitHub/CleanArchitecture/NUnitTest/NUnitTest.Service.csproj",
+        "packagesPath": "/Users/navani/.nuget/packages/",
+        "outputPath": "/Users/navani/Projects/GitHub/CleanArchitecture/NUnitTest/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Nsankaradeva\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/navani/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Domain\\MSF.Domain.csproj": {
-                "projectPath": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Domain\\MSF.Domain.csproj"
+              "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Application/MSF.Application.csproj": {
+                "projectPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Application/MSF.Application.csproj"
               },
-              "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Repo\\MSF.Application.csproj": {
-                "projectPath": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Repo\\MSF.Application.csproj"
+              "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/MSF.Domain.csproj": {
+                "projectPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/MSF.Domain.csproj"
               },
-              "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Service\\MSF.Service.csproj": {
-                "projectPath": "D:\\Navaneeth\\6.Personnal\\Projects\\CleanArchitecture\\MSF.Service\\MSF.Service.csproj"
+              "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Service/MSF.Service.csproj": {
+                "projectPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Service/MSF.Service.csproj"
               }
             }
           }
@@ -228,7 +293,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
         }
       }
     }

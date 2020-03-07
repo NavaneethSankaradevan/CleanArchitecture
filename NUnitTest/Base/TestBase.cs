@@ -1,22 +1,17 @@
+using System;
 using Core.Data;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MSF.Application;
-using MSF.Domain;
 using MSF.Service;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MSF.UnitTest
 {
 
-	public abstract class TestBase
+    public abstract class TestBase
 	{
 		private IServiceProvider _serviceProvider;
 

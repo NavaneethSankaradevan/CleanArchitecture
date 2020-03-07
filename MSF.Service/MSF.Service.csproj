@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MSF.Domain\MSF.Domain.csproj" />
-    <ProjectReference Include="..\MSF.Repo\MSF.Application.csproj" />
+    <ProjectReference Include="..\MSF.Application\MSF.Application.csproj" />
   </ItemGroup>
 
 </Project>
