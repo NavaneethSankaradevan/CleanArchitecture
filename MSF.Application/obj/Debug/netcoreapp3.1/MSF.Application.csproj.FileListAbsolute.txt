@@ -1,0 +1,11 @@
+D:\Navaneeth\6.Personnal\Projects\CleanArchitecture\MSF.Application\bin\Debug\netcoreapp3.1\MSF.Application.deps.json
+D:\Navaneeth\6.Personnal\Projects\CleanArchitecture\MSF.Application\bin\Debug\netcoreapp3.1\MSF.Application.dll
+D:\Navaneeth\6.Personnal\Projects\CleanArchitecture\MSF.Application\bin\Debug\netcoreapp3.1\MSF.Application.pdb
+D:\Navaneeth\6.Personnal\Projects\CleanArchitecture\MSF.Application\bin\Debug\netcoreapp3.1\MSF.Domain.dll
+D:\Navaneeth\6.Personnal\Projects\CleanArchitecture\MSF.Application\bin\Debug\netcoreapp3.1\MSF.Domain.pdb
+D:\Navaneeth\6.Personnal\Projects\CleanArchitecture\MSF.Application\obj\Debug\netcoreapp3.1\MSF.Application.csprojAssemblyReference.cache
+D:\Navaneeth\6.Personnal\Projects\CleanArchitecture\MSF.Application\obj\Debug\netcoreapp3.1\MSF.Application.AssemblyInfoInputs.cache
+D:\Navaneeth\6.Personnal\Projects\CleanArchitecture\MSF.Application\obj\Debug\netcoreapp3.1\MSF.Application.AssemblyInfo.cs
+D:\Navaneeth\6.Personnal\Projects\CleanArchitecture\MSF.Application\obj\Debug\netcoreapp3.1\MSF.Application.csproj.CopyComplete
+D:\Navaneeth\6.Personnal\Projects\CleanArchitecture\MSF.Application\obj\Debug\netcoreapp3.1\MSF.Application.dll
+D:\Navaneeth\6.Personnal\Projects\CleanArchitecture\MSF.Application\obj\Debug\netcoreapp3.1\MSF.Application.pdb

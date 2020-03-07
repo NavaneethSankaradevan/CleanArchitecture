@@ -1,0 +1,8 @@
+D:\Navaneeth\6.Personnal\Projects\CleanArchitecture\MSF.Domain\bin\Debug\netcoreapp3.1\MSF.Domain.deps.json
+D:\Navaneeth\6.Personnal\Projects\CleanArchitecture\MSF.Domain\bin\Debug\netcoreapp3.1\MSF.Domain.dll
+D:\Navaneeth\6.Personnal\Projects\CleanArchitecture\MSF.Domain\bin\Debug\netcoreapp3.1\MSF.Domain.pdb
+D:\Navaneeth\6.Personnal\Projects\CleanArchitecture\MSF.Domain\obj\Debug\netcoreapp3.1\MSF.Domain.csprojAssemblyReference.cache
+D:\Navaneeth\6.Personnal\Projects\CleanArchitecture\MSF.Domain\obj\Debug\netcoreapp3.1\MSF.Domain.AssemblyInfoInputs.cache
+D:\Navaneeth\6.Personnal\Projects\CleanArchitecture\MSF.Domain\obj\Debug\netcoreapp3.1\MSF.Domain.AssemblyInfo.cs
+D:\Navaneeth\6.Personnal\Projects\CleanArchitecture\MSF.Domain\obj\Debug\netcoreapp3.1\MSF.Domain.dll
+D:\Navaneeth\6.Personnal\Projects\CleanArchitecture\MSF.Domain\obj\Debug\netcoreapp3.1\MSF.Domain.pdb
