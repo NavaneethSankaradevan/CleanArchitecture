@@ -4,12 +4,14 @@ using Microsoft.AspNetCore.Mvc;
 using MSF.Domain;
 using MSF.Service;
 using System;
+using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace MSF.Api.Controllers
 {
 	[Route("api/[controller]")]
-	[Authorize(Policy = Constants.ReadOnlyAccess, AuthenticationSchemes = "Bearer")]
+	//[Authorize(Policy = Constants.ReadOnlyAccess, AuthenticationSchemes = "Bearer")]
 	public class CategoriesController : ControllerBase
 	{
 
@@ -27,7 +29,9 @@ namespace MSF.Api.Controllers
 		[HttpGet]
 		public async Task<IActionResult> Get()
 		{
-			return Ok(await _categoryService.GetAllCategories());
+			var cats = Enumerable.Range(1, 10).Select(r => new Category { ID = r, CategoryName = $"Category{r}" });
+			return Ok(await Task.FromResult(cats));
+			//return Ok(await _categoryService.GetAllCategories());
 		}
 
 		// GET: api/Categories/5
@@ -55,7 +59,8 @@ namespace MSF.Api.Controllers
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Post([FromBody] Category category)
 		{
-			int id = await _categoryService.SaveCategory(category);
+			
+			int id = await _categoryService.SaveCategory(category, Common.GetLoggedInUser(User));
 
 			if (id > 0)
 				return Ok(id);
@@ -71,7 +76,7 @@ namespace MSF.Api.Controllers
 			using (var tran = _unitOfWork.DataContext.Database.BeginTransaction())
 			{
 
-				var result = await _categoryService.DeleteCategory(id); // Set Deleted flag.
+				var result = await _categoryService.DeleteCategory(id, Common.GetLoggedInUser(User)); // Set Deleted flag.
 
 				if (result)
 				{

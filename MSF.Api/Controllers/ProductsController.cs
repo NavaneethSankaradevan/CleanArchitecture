@@ -49,7 +49,7 @@ namespace MSF.Api.Controllers
 		{
 			try
 			{
-				var productView = await _productService.SaveProduct(product);
+				var productView = await _productService.SaveProduct(product, Common.GetLoggedInUser(User));
 
 				if (productView.ProductId > 0)
 				{
@@ -69,7 +69,7 @@ namespace MSF.Api.Controllers
 
 		public async Task<IActionResult> Delete(int id)
 		{
-			if (await _productService.DeleteProduct(id))
+			if (await _productService.DeleteProduct(id, Common.GetLoggedInUser(User)))
 				return Ok();
 
 			return StatusCode(500, "Unable to deleted the product");

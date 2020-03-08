@@ -6200,6 +6200,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "MSF.Application >= 1.0.0",
       "MSF.Domain >= 1.0.0",
       "MSF.Service >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.0",
@@ -6234,6 +6235,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Application/MSF.Application.csproj": {
+              "projectPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Application/MSF.Application.csproj"
+            },
             "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/MSF.Domain.csproj": {
               "projectPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/MSF.Domain.csproj"
             },

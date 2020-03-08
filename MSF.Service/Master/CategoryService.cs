@@ -12,9 +12,9 @@ namespace MSF.Service
 
         Task<Category> GetCategoryById(int Id);
 
-        Task<int> SaveCategory(Category category);
+        Task<int> SaveCategory(Category category,string user);
 
-        Task<bool> DeleteCategory(int Id);
+        Task<bool> DeleteCategory(int Id,string user);
     }
 
     internal class CategoryService : ICategoryService
@@ -30,9 +30,9 @@ namespace MSF.Service
             this.unitOfWork = unitOfWork;
         }
 
-        async Task<bool> ICategoryService.DeleteCategory(int Id)
+        async Task<bool> ICategoryService.DeleteCategory(int Id,string user)
         {
-            await categoryRepository.SoftDelete(Id);
+            await categoryRepository.SoftDelete(Id,user);
             int result = await unitOfWork.CommitAsync();
             return result > 0;
         }
@@ -47,9 +47,9 @@ namespace MSF.Service
             return await categoryRepository.GetAsync(Id);
         }
 
-        async Task<int> ICategoryService.SaveCategory(Category category)
+        async Task<int> ICategoryService.SaveCategory(Category category,string user)
         {
-            await categoryRepository.SaveAsync(category);
+            await categoryRepository.SaveAsync(category,user);
             int result = await unitOfWork.CommitAsync();
 
             if (result > 0) return category.ID;

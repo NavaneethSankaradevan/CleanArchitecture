@@ -28,6 +28,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Application/MSF.Application.csproj": {
+                "projectPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Application/MSF.Application.csproj"
+              },
               "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/MSF.Domain.csproj": {
                 "projectPath": "/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/MSF.Domain.csproj"
               },

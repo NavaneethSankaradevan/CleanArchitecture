@@ -14,9 +14,9 @@ namespace MSF.Service
 
         Task<ProductViewModel> GetProductById(long Id);
 
-        Task<ProductViewModel> SaveProduct(Product product);
+        Task<ProductViewModel> SaveProduct(Product product,string user);
 
-        Task<bool> DeleteProduct(long Id);
+        Task<bool> DeleteProduct(long Id,string user);
     }
 
     internal class ProductService : IProductService
@@ -31,9 +31,9 @@ namespace MSF.Service
             this.unitOfWork = unitOfWork;
         }
 
-        async Task<bool> IProductService.DeleteProduct(long Id)
+        async Task<bool> IProductService.DeleteProduct(long Id, string user)
         {
-            await productRepository.SoftDelete(Id);
+            await productRepository.SoftDelete(Id,user);
             int result = await unitOfWork.CommitAsync();
             return result > 0;
         }
@@ -46,9 +46,9 @@ namespace MSF.Service
             return products.Select(p => (ProductViewModel)p).ToList();
         }
 
-        async Task<ProductViewModel> IProductService.SaveProduct(Product product)
+        async Task<ProductViewModel> IProductService.SaveProduct(Product product,string user)
         {
-            await productRepository.SaveAsync(product);
+            await productRepository.SaveAsync(product,user);
             await unitOfWork.CommitAsync();
 
             return product;
