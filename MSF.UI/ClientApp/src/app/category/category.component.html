@@ -1,0 +1,22 @@
+<h3 >Category</h3>
+
+<p>List all Categories from the server.</p>
+
+<p *ngIf="!Categories"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="Categories">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>ID.</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cat of Categories">
+            <td>{{ cat.categoryName }}</td>
+            <td>{{ cat.id }}</td>
+          </tr>
+        </tbody>
+      </table>
+      

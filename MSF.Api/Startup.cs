@@ -11,6 +11,7 @@ using Microsoft.IdentityModel.Tokens;
 using MSF.Application;
 using MSF.Service;
 using System.Text;
+using Microsoft.OpenApi.Models;
 
 namespace MSF.API
 {
@@ -41,6 +42,13 @@ namespace MSF.API
 			// Since ILogger is no longer registered by default but ILogger<T> is.
 			services.AddLogging(l => l.AddConsole());
 
+
+            // Register the Swagger generator, defining 1 or more Swagger documents
+            services.AddSwaggerGen(c =>
+			{
+				c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+			});
+
 			services.AddControllers();
 
 		}
@@ -67,6 +75,12 @@ namespace MSF.API
 
 			app.UseAuthentication();
 			app.UseAuthorization();
+
+			app.UseSwagger();
+			app.UseSwaggerUI(c =>
+			{
+				c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+			});
 
 			app.UseEndpoints(endpoints =>
 			{

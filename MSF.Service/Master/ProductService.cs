@@ -13,7 +13,7 @@ namespace MSF.Service
 
         Task<List<ProductViewModel>> GetProducts();
 
-        Task<List<ProductViewModel>> GetProductsForPage(PageParams pageParams);
+        Task<List<ProductViewModel>> GetProductsForPage(int pageNo, int recordCount);
 
         Task<ProductViewModel> GetProductById(long Id);
 
@@ -51,9 +51,13 @@ namespace MSF.Service
             return products.Select(p => (ProductViewModel)p).ToList();
         }
 
-        async Task<List<ProductViewModel>> IProductService.GetProductsForPage(PageParams pageParams)
+        async Task<List<ProductViewModel>> IProductService.GetProductsForPage(int pageNo, int recordCount)
         {
-            var products = await productRepository.GetAllPageData(p => p.ProductName != string.Empty, pageParams.PageNumber, pageParams.RecordCount);
+
+            // Default paging logic.
+            pageNo = pageNo > 0 ? pageNo - 1 : 0;
+
+            var products = await productRepository.GetAllPageData(p => p.ProductName, pageNo, recordCount);
             return products.Select(p => (ProductViewModel)p).ToList();
         }
 

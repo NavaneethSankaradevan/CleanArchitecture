@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace MSF.Api.Controllers
 {
 	[Route("api/[controller]")]
+    [ApiController]
 	[Authorize(Policy = Constants.ReadOnlyAccess, AuthenticationSchemes = "Bearer")]
 	public class ProductsController : ControllerBase
 	{
@@ -39,8 +40,14 @@ namespace MSF.Api.Controllers
 			}
 		}
 
-		// POST: api/Products
-		[HttpPost]
+        //api/products/page
+        [HttpGet]
+        [Route("perPage")]
+        public async Task<IActionResult> GetProductsForPage([FromQuery] int pageNo, [FromQuery]int recordCount)
+            => Ok(await _productService.GetProductsForPage( pageNo,  recordCount));
+
+        // POST: api/Products
+        [HttpPost]
 		[Authorize(Policy = Constants.AddEditAccess)]
 		public async Task<IActionResult> Post([FromBody] ProductViewModel product)
 		{
