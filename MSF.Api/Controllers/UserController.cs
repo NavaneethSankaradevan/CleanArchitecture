@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MSF.Service;
 using System;
 using System.Threading.Tasks;
@@ -7,6 +8,7 @@ namespace MSF.Api.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
+	[AllowAnonymous]
 	public class UserController : ControllerBase
 	{
 		#region Init
@@ -24,6 +26,7 @@ namespace MSF.Api.Controllers
 		#region Users
 
 		[HttpPost("GetToken")]
+        
 		public async Task<IActionResult> GetAccessToken([FromBody]LoginViewModel userModel)
 		{
 			try

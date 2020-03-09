@@ -15,9 +15,9 @@ namespace MSF.Domain
 
         public decimal MRPPrice { get;  set; }
 
-        public decimal Discount { get; set; }
+        public decimal? Discount { get; set; }
 
-        public bool IsDiscountInPercentage { get; set; }
+        public bool? IsDiscountInPercentage { get; set; }
 
         public int CategoryId { get;  set; }
 
@@ -33,9 +33,9 @@ namespace MSF.Domain
 
         public virtual UOM UOM { get; set; }
 
-        public int BulkUOMId { get; set; }
+        public int? BulkUOMId { get; set; }
 
-        public int BulkUOMQty { get; set; }
+        public int? BulkUOMQty { get; set; }
 
         public int OpeningStock { get; set; }
     }

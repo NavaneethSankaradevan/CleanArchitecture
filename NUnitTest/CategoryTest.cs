@@ -29,7 +29,7 @@ namespace MSF.UnitTest
 		[Test]
 		public async Task AddCategory()
 		{
-			await categoryService.SaveCategory(new Domain.Category { CategoryName= "Category 1"  });
+			await categoryService.SaveCategory(new Domain.Category { CategoryName= "Category 1"  }, "Test user");
 
 			var categories = await categoryService.GetAllCategories();
 			Assert.IsNotNull(categories);

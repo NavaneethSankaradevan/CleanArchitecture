@@ -17,9 +17,9 @@ namespace MSF.Service
 
 		public decimal MRPPrice { get; set; }
 
-		public decimal Discount { get; set; }
+		public decimal? Discount { get; set; }
 
-		public bool IsDiscountInPercentage { get; set; }
+		public bool? IsDiscountInPercentage { get; set; }
 
 		public int CategoryId { get; set; }
 
@@ -35,9 +35,9 @@ namespace MSF.Service
 
 		public string UOMName { get; set; }
 
-		public int BulkUOMId { get; set; }
+		public int? BulkUOMId { get; set; }
 
-		public int BulkUOMQty { get; set; }
+		public int? BulkUOMQty { get; set; }
 
 		public int OpeningStock { get; set; }
 
@@ -45,29 +45,30 @@ namespace MSF.Service
 
 		public static implicit operator ProductViewModel(Product product)
 		{
-			return new ProductViewModel {
-				 ProductId = product.ID,
-				 ProductCode = product.ProductCode,
-				 ProductImage = Convert.ToBase64String(product.ProductImage),
-				 ProductName = product.ProductName,
-				 MRPPrice = product.MRPPrice,
-				 DisplayName= product.DisplayName,
-				 Discount=product.Discount,
-				 RowVersion = Convert.ToBase64String( product.RowVersion ),
-				 CategoryId = product.CategoryId,
-				 CategoryName = product.Category.CategoryName,
-				 MinimumQuantity = product.MinimumQuantity,
-				 UOMId = product.UOMId ,
-				 UOMName = product.UOM.UOMAbbr,
-				 TaxId = product.TaxId,
-				 TaxName = product.Tax.TaxName,
-				 OpeningStock = product.OpeningStock
+			return new ProductViewModel
+			{
+				ProductId = product.ID,
+				ProductCode = product.ProductCode,
+				ProductImage = (product.ProductImage == null) ? string.Empty : Convert.ToBase64String(product.ProductImage),
+				ProductName = product.ProductName,
+				MRPPrice = product.MRPPrice,
+				DisplayName = product.DisplayName,
+				Discount = product.Discount,
+				RowVersion = Convert.ToBase64String(product.RowVersion),
+				CategoryId = product.CategoryId,
+				CategoryName = product.Category.CategoryName,
+				MinimumQuantity = product.MinimumQuantity,
+				UOMId = product.UOMId,
+				UOMName = product.UOM.UOMAbbr,
+				TaxId = product.TaxId,
+				TaxName = product.Tax.TaxName,
+				OpeningStock = product.OpeningStock
 			};
 		}
 
 		public static implicit operator Product(ProductViewModel viewModel)
 		{
-			return new Product 
+			return new Product
 			{
 				ID = viewModel.ProductId,
 				ProductCode = viewModel.ProductCode,
@@ -82,7 +83,7 @@ namespace MSF.Service
 				UOMId = viewModel.UOMId,
 				TaxId = viewModel.TaxId,
 				BulkUOMId = viewModel.BulkUOMId,
-				BulkUOMQty=viewModel.BulkUOMQty,
+				BulkUOMQty = viewModel.BulkUOMQty,
 				IsDiscountInPercentage = viewModel.IsDiscountInPercentage,
 				OpeningStock = viewModel.OpeningStock
 			};

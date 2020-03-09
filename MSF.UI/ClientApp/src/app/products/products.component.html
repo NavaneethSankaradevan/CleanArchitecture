@@ -1,0 +1,40 @@
+<h3 >Products</h3>
+
+<p>Listing all Products from the server.</p>
+
+<p *ngIf="!products"><em>Loading...</em></p>
+
+    <div id="products" class="tab-pane" *ngIf="products">
+      <div class="row">
+        <div class="col-md-12">
+          &nbsp;
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="itemList">
+            <ul id="itemList" >
+              <li *ngFor="let product of products;" >
+                <div class="imgContainer" data-toggle="modal" data-target="#model">
+                    <div class="imgContainerItem" >
+                      p:{{product.productImage}}
+                          <img *ngIf="product.productImage" alt="{{product.productName}}" [src]="product.productImage">
+                          <div class="imgDiv" *ngIf="!product.productImage"></div>
+                          <div class="itemLable">{{product.displayName}} </div>
+                    </div>
+                  <div class="content">
+                    Price:
+                    <span class="font-weight-bold;" >  {{product.mrpPrice}} </span>
+                  </div>
+                </div>
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+        
+      <br />
+      <br />            
+    </div>
+

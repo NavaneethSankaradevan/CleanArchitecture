@@ -9,6 +9,7 @@ namespace MSF.Application
         public TranDbContext(DbContextOptions<TranDbContext> options)
             : base(options)
         {
+            Database.EnsureCreated();
         }
 
         public DbSet<Category> Categories { get; set; }

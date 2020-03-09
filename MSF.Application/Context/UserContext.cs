@@ -10,6 +10,8 @@ namespace MSF.Application
         public UserContext(DbContextOptions<UserContext> options)
             : base(options)
         {
+            
+            Database.EnsureCreated();
         }
 
         protected override void OnModelCreating(ModelBuilder builder)

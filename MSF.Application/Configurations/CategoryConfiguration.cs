@@ -9,6 +9,7 @@ namespace MSF.Application
         public void Configure(EntityTypeBuilder<Category> builder)
         {
             builder.HasIndex(t => t.CategoryName).IsUnique();
+            
 
             builder.Property(t => t.CategoryName).IsRequired().HasMaxLength(60);
 

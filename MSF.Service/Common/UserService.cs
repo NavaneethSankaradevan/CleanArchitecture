@@ -69,11 +69,12 @@ namespace MSF.Service
 						claims,
 						expires: DateTime.UtcNow.AddMinutes(120),
 						signingCredentials: creds);
-					
+
 					return new AccessTokenResponse
 					{
 						AccessToken = new JwtSecurityTokenHandler().WriteToken(token),
-						Expireation = token.ValidTo
+						Expireation = token.ValidTo,
+						User = string.IsNullOrEmpty(user.FirstName) ? user.UserName ?? user.Email : $"{user.FirstName} {user.LastName}"
 					};
 				}
 				

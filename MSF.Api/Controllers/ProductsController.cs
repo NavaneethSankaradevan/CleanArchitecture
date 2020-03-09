@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MSF.Api.Controllers
 {
 	[Route("api/[controller]")]
-	[Authorize(Policy = Constants.ReadOnlyAccess)]
+	[Authorize(Policy = Constants.ReadOnlyAccess, AuthenticationSchemes = "Bearer")]
 	public class ProductsController : ControllerBase
 	{
 		private IProductService _productService;
@@ -19,11 +19,8 @@ namespace MSF.Api.Controllers
 
 		// GET: api/Products
 		[HttpGet]
-		public async Task<IActionResult> Get()
-		{
-			return Ok(await _productService.GetProducts());
-		}
-
+		public async Task<IActionResult> Get() => Ok(await _productService.GetProducts());
+		
 		// GET: api/Products/5
 		[HttpGet("{id:int}")]
 		public async Task<IActionResult> Get(int id)

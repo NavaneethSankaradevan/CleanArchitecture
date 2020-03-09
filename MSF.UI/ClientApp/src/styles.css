@@ -15,10 +15,75 @@ code {
   border-color: #1861ac;
 }
 
-.grid div.row{
+.table tr{
   cursor: pointer; 
 }
 
-.grid div.row:hover{
-  background-color: bisque;
+.table th{ background-color: #1b6ec2; color: #fff;}
+.table th:hover { pointer-events: none; background-color: none;}
+
+.table tr:hover{
+  background-color: bisque !important;
+}
+
+
+.itemList{
+  margin: auto;
+  
+}
+
+.itemList ul{     
+  width:98%;
+  list-style: none;
+  overflow: hidden;
+  padding: 2px;
+  margin: auto;
+}
+.itemList li{
+  float: left;
+  line-height:1.5em;
+  padding: 15px;
+}
+
+.imgContainer{
+  max-width:250px;
+  max-height: 270px;
+  padding: 5px;
+  background-color: #15a2b8;
+  border-radius: .25rem;
+  margin: auto;
+  cursor: pointer;
+  box-shadow: 0 .3rem 1rem rgba(37, 178, 221, 0.46);
+}
+
+.itemLable{
+  font-size: 10pt;
+  font-weight: bold;
+  margin-top: 18px;
+  text-align: center;
+}
+.imgContainerItem {
+  width:230px;
+  height:230px;
+  background-color:#d9ecf7; 
+  border-radius: .25rem;    
+  border: 1px solid rgba(9, 100, 128, 0.46);
+  padding: 20px;
+}
+.imgContainerItem img,.imgDiv{
+  width:100%;
+  height: 140px;
+  object-fit: cover;
+  border: solid 1px #eee;
+  border-radius: 6px;
+  background-size:contain;
+  background:#fff url('assets/noimage.jpg') no-repeat;
+
+}
+.imgContainer .content{
+  font-size: 70%;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin: 2px;
 }

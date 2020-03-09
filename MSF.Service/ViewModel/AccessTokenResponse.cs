@@ -11,5 +11,7 @@ namespace MSF.Service
 
         public DateTime Expireation { get; set; }
 
+        public string User { get; set; }
+
     }
 }

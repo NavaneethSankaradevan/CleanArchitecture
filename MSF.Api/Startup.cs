@@ -30,13 +30,9 @@ namespace MSF.API
 			ConfigureAuthentication(services);
 
 			// Resolve DbContext dependencies.
-			//services.ConfigureDataContext(
-			//	user => user.UseSqlServer(Configuration.GetConnectionString("LoginConnection")),
-			//	tran => tran.UseSqlServer(Configuration.GetConnectionString("TranDbConnection")));
-
-			services.ConfigureDataContext(userDb =>
-                userDb.UseInMemoryDatabase("UserDb"),
-                tranDb => tranDb.UseInMemoryDatabase("TranDb"));
+			services.ConfigureDataContext(
+				user => user.UseSqlServer(Configuration.GetConnectionString("LoginConnection")),
+				tran => tran.UseSqlServer(Configuration.GetConnectionString("TranDbConnection")));
 
 			// Resolve the service dependencies.
 			services.ConfigureServices();

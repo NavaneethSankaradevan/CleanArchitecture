@@ -10,11 +10,16 @@ namespace MSF.Service
 
     public interface IProductService
     {
+
         Task<List<ProductViewModel>> GetProducts();
+
+        Task<List<ProductViewModel>> GetProductsForPage(PageParams pageParams);
 
         Task<ProductViewModel> GetProductById(long Id);
 
         Task<ProductViewModel> SaveProduct(Product product,string user);
+
+
 
         Task<bool> DeleteProduct(long Id,string user);
     }
@@ -43,6 +48,12 @@ namespace MSF.Service
         async Task<List<ProductViewModel>> IProductService.GetProducts()
         {
             var products = await productRepository.GetAllAsync();
+            return products.Select(p => (ProductViewModel)p).ToList();
+        }
+
+        async Task<List<ProductViewModel>> IProductService.GetProductsForPage(PageParams pageParams)
+        {
+            var products = await productRepository.GetAllPageData(p => p.ProductName != string.Empty, pageParams.PageNumber, pageParams.RecordCount);
             return products.Select(p => (ProductViewModel)p).ToList();
         }
 

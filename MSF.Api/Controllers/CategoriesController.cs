@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace MSF.Api.Controllers
 {
 	[Route("api/[controller]")]
-	//[Authorize(Policy = Constants.ReadOnlyAccess, AuthenticationSchemes = "Bearer")]
+	[Authorize(Policy = Constants.ReadOnlyAccess, AuthenticationSchemes = "Bearer")]
 	public class CategoriesController : ControllerBase
 	{
 
@@ -27,12 +27,7 @@ namespace MSF.Api.Controllers
 
 		// GET: api/Categories
 		[HttpGet]
-		public async Task<IActionResult> Get()
-		{
-			var cats = Enumerable.Range(1, 10).Select(r => new Category { ID = r, CategoryName = $"Category{r}" });
-			return Ok(await Task.FromResult(cats));
-			//return Ok(await _categoryService.GetAllCategories());
-		}
+        public async Task<IActionResult> Get() => Ok(await _categoryService.GetAllCategories());
 
 		// GET: api/Categories/5
 		[HttpGet("{id}")]
@@ -41,7 +36,7 @@ namespace MSF.Api.Controllers
 			try
 			{
 				var category = await _categoryService.GetCategoryById(id);
-				if (category != null)
+                if (category != null)
 					return Ok(category);
 
 				throw new Exception("Not Found");
