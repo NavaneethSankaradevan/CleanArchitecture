@@ -11,15 +11,13 @@ namespace MSF.Service
     public interface IProductService
     {
 
-        Task<List<ProductViewModel>> GetProducts();
+        Task<List<ProductGetViewModel>> GetProducts();
 
-        Task<List<ProductViewModel>> GetProductsForPage(int pageNo, int recordCount);
+        Task<List<ProductGetViewModel>> GetProductsForPage(int pageNo, int recordCount);
 
-        Task<ProductViewModel> GetProductById(long Id);
+        Task<ProductGetViewModel> GetProductById(long Id);
 
-        Task<ProductViewModel> SaveProduct(Product product,string user);
-
-
+        Task<ProductGetViewModel> SaveProduct(ProductViewModel product,string user);
 
         Task<bool> DeleteProduct(long Id,string user);
     }
@@ -43,30 +41,31 @@ namespace MSF.Service
             return result > 0;
         }
 
-        async Task<ProductViewModel> IProductService.GetProductById(long Id) => await productRepository.GetAsync(Id);
+        async Task<ProductGetViewModel> IProductService.GetProductById(long Id) => await productRepository.GetAsync(Id);
         
-        async Task<List<ProductViewModel>> IProductService.GetProducts()
+        async Task<List<ProductGetViewModel>> IProductService.GetProducts()
         {
             var products = await productRepository.GetAllAsync();
-            return products.Select(p => (ProductViewModel)p).ToList();
+            return products.Select(p => (ProductGetViewModel)p).ToList();
         }
 
-        async Task<List<ProductViewModel>> IProductService.GetProductsForPage(int pageNo, int recordCount)
+        async Task<List<ProductGetViewModel>> IProductService.GetProductsForPage(int pageNo, int recordCount)
         {
 
             // Default paging logic.
             pageNo = pageNo > 0 ? pageNo - 1 : 0;
 
             var products = await productRepository.GetAllPageData(p => p.ProductName, pageNo, recordCount);
-            return products.Select(p => (ProductViewModel)p).ToList();
+            return products.Select(p => (ProductGetViewModel)p).ToList();
         }
 
-        async Task<ProductViewModel> IProductService.SaveProduct(Product product,string user)
+        async Task<ProductGetViewModel> IProductService.SaveProduct(ProductViewModel product,string user)
         {
-            await productRepository.SaveAsync(product,user);
+            Product updateProduct = product;
+            await productRepository.SaveAsync(updateProduct, user);
             await unitOfWork.CommitAsync();
 
-            return product;
+            return updateProduct;
         }
     }
 }

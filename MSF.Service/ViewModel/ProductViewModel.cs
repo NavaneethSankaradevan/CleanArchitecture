@@ -21,19 +21,13 @@ namespace MSF.Service
 
 		public bool? IsDiscountInPercentage { get; set; }
 
-		public int CategoryId { get; set; }
-
-		public string CategoryName { get; set; }
+        public int CategoryId { get; set; }
 
 		public int MinimumQuantity { get; set; }
 
 		public int TaxId { get; set; }
 
-		public string TaxName { get; set; }
-
 		public int UOMId { get; set; }
-
-		public string UOMName { get; set; }
 
 		public int? BulkUOMId { get; set; }
 
@@ -42,29 +36,6 @@ namespace MSF.Service
 		public int OpeningStock { get; set; }
 
 		public string RowVersion { get; set; }
-
-		public static implicit operator ProductViewModel(Product product)
-		{
-			return new ProductViewModel
-			{
-				ProductId = product.ID,
-				ProductCode = product.ProductCode,
-				ProductImage = (product.ProductImage == null) ? string.Empty : Convert.ToBase64String(product.ProductImage),
-				ProductName = product.ProductName,
-				MRPPrice = product.MRPPrice,
-				DisplayName = product.DisplayName,
-				Discount = product.Discount,
-				RowVersion = Convert.ToBase64String(product.RowVersion),
-				CategoryId = product.CategoryId,
-				CategoryName = product.Category.CategoryName,
-				MinimumQuantity = product.MinimumQuantity,
-				UOMId = product.UOMId,
-				UOMName = product.UOM.UOMAbbr,
-				TaxId = product.TaxId,
-				TaxName = product.Tax.TaxName,
-				OpeningStock = product.OpeningStock
-			};
-		}
 
 		public static implicit operator Product(ProductViewModel viewModel)
 		{
@@ -87,6 +58,54 @@ namespace MSF.Service
 				IsDiscountInPercentage = viewModel.IsDiscountInPercentage,
 				OpeningStock = viewModel.OpeningStock
 			};
+		}
+	}
+
+	public class ProductGetViewModel : ProductViewModel
+	{
+		public string CategoryName { get; set; }
+		public decimal ActualPrice { get; set; }
+		public string TaxName { get; set; }
+		public string UOMName { get; set; }
+
+		public static implicit operator ProductGetViewModel(Product product)
+		{
+			
+			return new ProductGetViewModel
+			{
+				ProductId = product.ID,
+				ProductCode = product.ProductCode,
+				ProductImage = (product.ProductImage == null) ? string.Empty : Convert.ToBase64String(product.ProductImage),
+				ProductName = product.ProductName,
+				MRPPrice = product.MRPPrice,
+                IsDiscountInPercentage = product.IsDiscountInPercentage.GetValueOrDefault(),
+				DisplayName = product.DisplayName,
+				Discount = product.Discount,
+				RowVersion = Convert.ToBase64String(product.RowVersion),
+				CategoryId = product.CategoryId,
+				MinimumQuantity = product.MinimumQuantity,
+				UOMId = product.UOMId,
+				TaxId = product.TaxId,
+				OpeningStock = product.OpeningStock,
+				CategoryName = product.Category.CategoryName,
+				UOMName = product.UOM.UOMAbbr,
+				TaxName = product.Tax.TaxName,
+				ActualPrice = getActualPrice(product.MRPPrice, product.Discount, product.IsDiscountInPercentage)
+			};
+
+		}
+
+		private static decimal getActualPrice(decimal mrpPrice, decimal? discount, bool? isPercentate)
+		{
+			if (discount.GetValueOrDefault() <= 0)
+				return mrpPrice;
+
+			if (isPercentate.GetValueOrDefault() == true)
+            {
+				return mrpPrice - (mrpPrice * (discount.Value / 100));
+			}
+			else
+				return mrpPrice - discount.GetValueOrDefault();   
 		}
 	}
 }

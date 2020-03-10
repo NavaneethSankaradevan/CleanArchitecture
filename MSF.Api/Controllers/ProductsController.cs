@@ -70,7 +70,6 @@ namespace MSF.Api.Controllers
 		// DELETE: api/ApiWithActions/5
 		[HttpDelete("{id:int}")]
 		[Authorize(Policy = Constants.AddEditDeleteAccess)]
-
 		public async Task<IActionResult> Delete(int id)
 		{
 			if (await _productService.DeleteProduct(id, Common.GetLoggedInUser(User)))

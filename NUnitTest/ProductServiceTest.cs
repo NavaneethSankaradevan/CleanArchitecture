@@ -29,7 +29,7 @@ namespace MSF.UnitTest
 		[Test]
 		public async Task SaveProduct()
 		{
-			var result = await productService.SaveProduct(new Domain.Product { ProductCode="001", ProductName ="Product 1", CategoryId = 1 }, "Test User");
+			var result = await productService.SaveProduct(new ProductViewModel { ProductCode="001", ProductName ="Product 1", CategoryId = 1 }, "Test User");
 			Assert.IsNotNull(result);
 		}
 	}
