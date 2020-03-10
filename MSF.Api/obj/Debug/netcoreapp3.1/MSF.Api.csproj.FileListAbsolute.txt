@@ -62,7 +62,6 @@
 /Users/navani/Projects/GitHub/CleanArchitecture/MSF.Api/bin/Debug/netcoreapp3.1/MSF.Application.pdb
 /Users/navani/Projects/GitHub/CleanArchitecture/MSF.Api/bin/Debug/netcoreapp3.1/MSF.Service.pdb
 /Users/navani/Projects/GitHub/CleanArchitecture/MSF.Api/obj/Debug/netcoreapp3.1/MSF.Api.csprojAssemblyReference.cache
-/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Api/obj/Debug/netcoreapp3.1/MSF.Api.MvcApplicationPartsAssemblyInfo.cs
 /Users/navani/Projects/GitHub/CleanArchitecture/MSF.Api/obj/Debug/netcoreapp3.1/MSF.Api.MvcApplicationPartsAssemblyInfo.cache
 /Users/navani/Projects/GitHub/CleanArchitecture/MSF.Api/obj/Debug/netcoreapp3.1/MSF.Api.AssemblyInfoInputs.cache
 /Users/navani/Projects/GitHub/CleanArchitecture/MSF.Api/obj/Debug/netcoreapp3.1/MSF.Api.AssemblyInfo.cs

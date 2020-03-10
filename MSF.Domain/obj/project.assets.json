@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Core.Data/1.1.0": {
+      "Core.Data/2.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.0.1"
@@ -314,14 +314,14 @@
     }
   },
   "libraries": {
-    "Core.Data/1.1.0": {
-      "sha512": "qaUki30GHkcXILAEimpqWhNqPR4WV7FASGKos2K/6Vv4ni5M6049gGUUsTcOVBnHAzu3DH7IovLY5ovRt58NDw==",
+    "Core.Data/2.0.0": {
+      "sha512": "TlNl8y0zLv5p6O6Ulrvu4UwG/UUPZWFRHynv6JJfYQWkmjU4m725/2yECf8XgU/b9DmvLD4afA5Hmru2r+jvIQ==",
       "type": "package",
-      "path": "core.data/1.1.0",
+      "path": "core.data/2.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "core.data.1.1.0.nupkg.sha512",
+        "core.data.2.0.0.nupkg.sha512",
         "core.data.nuspec",
         "lib/netcoreapp2.0/Core.Data.dll"
       ]
@@ -862,7 +862,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Core.Data >= 1.1.0",
+      "Core.Data >= 2.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.2",
       "Newtonsoft.Json >= 12.0.3"
     ]
@@ -908,7 +908,7 @@
         "dependencies": {
           "Core.Data": {
             "target": "Package",
-            "version": "[1.1.0, )"
+            "version": "[2.0.0, )"
           },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",

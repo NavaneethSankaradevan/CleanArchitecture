@@ -1,3 +1,4 @@
+using System;
 using Core.Data;
 
 namespace MSF.Domain

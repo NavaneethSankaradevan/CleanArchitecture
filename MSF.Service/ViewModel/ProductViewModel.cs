@@ -43,12 +43,12 @@ namespace MSF.Service
 			{
 				ID = viewModel.ProductId,
 				ProductCode = viewModel.ProductCode,
-				ProductImage = Convert.FromBase64String(viewModel.ProductImage),
+				ProductImage = string.IsNullOrEmpty( viewModel.ProductImage)? null: Convert.FromBase64String(viewModel.ProductImage),
 				ProductName = viewModel.ProductName,
 				MRPPrice = viewModel.MRPPrice,
 				DisplayName = viewModel.DisplayName,
 				Discount = viewModel.Discount,
-				RowVersion = Convert.FromBase64String(viewModel.RowVersion),
+				RowVersion = string.IsNullOrEmpty(viewModel.RowVersion) ? null :Convert.FromBase64String(viewModel.RowVersion),
 				CategoryId = viewModel.CategoryId,
 				MinimumQuantity = viewModel.MinimumQuantity,
 				UOMId = viewModel.UOMId,
@@ -87,9 +87,9 @@ namespace MSF.Service
 				UOMId = product.UOMId,
 				TaxId = product.TaxId,
 				OpeningStock = product.OpeningStock,
-				CategoryName = product.Category.CategoryName,
-				UOMName = product.UOM.UOMAbbr,
-				TaxName = product.Tax.TaxName,
+				CategoryName = product.Category?.CategoryName,
+				UOMName = product.UOM?.UOMAbbr,
+				TaxName = product.Tax?.TaxName,
 				ActualPrice = getActualPrice(product.MRPPrice, product.Discount, product.IsDiscountInPercentage)
 			};
 

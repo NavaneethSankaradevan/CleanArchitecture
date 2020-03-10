@@ -9,6 +9,7 @@ D:/Navaneeth/6.Personnal/Projects/CleanArchitecture/MSF.Domain/obj/Debug/netcore
 /Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/bin/Debug/netcoreapp3.1/MSF.Domain.deps.json
 /Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/bin/Debug/netcoreapp3.1/MSF.Domain.dll
 /Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/bin/Debug/netcoreapp3.1/MSF.Domain.pdb
+/Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/obj/Debug/netcoreapp3.1/MSF.Domain.csprojAssemblyReference.cache
 /Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/obj/Debug/netcoreapp3.1/MSF.Domain.AssemblyInfoInputs.cache
 /Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/obj/Debug/netcoreapp3.1/MSF.Domain.AssemblyInfo.cs
 /Users/navani/Projects/GitHub/CleanArchitecture/MSF.Domain/obj/Debug/netcoreapp3.1/MSF.Domain.dll

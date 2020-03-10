@@ -16,6 +16,11 @@ export class ProductsComponent {
     http.get<any[]>(environment.apiBaseURI + 'Products').subscribe(result => {
         this.products = result;
       }, error => console.error(error));
+  }
+
+  getImage (prod:any):string {
+    return prod.productImage || 'noimage.jpg';
+  }
 }
-}
+
 

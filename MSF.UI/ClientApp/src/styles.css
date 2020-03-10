@@ -59,12 +59,12 @@ code {
 .itemLable{
   font-size: 10pt;
   font-weight: bold;
-  margin-top: 18px;
+  margin-top: 14px;
   text-align: center;
 }
 .imgContainerItem {
   width:230px;
-  height:230px;
+  height:220px;
   background-color:#d9ecf7; 
   border-radius: .25rem;    
   border: 1px solid rgba(9, 100, 128, 0.46);
@@ -85,5 +85,5 @@ code {
   font-weight: bold;
   color: #fff;
   text-align: center;
-  margin: 2px;
+  margin: 1px;
 }
