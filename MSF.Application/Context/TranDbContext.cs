@@ -18,7 +18,9 @@ namespace MSF.Application
 
         public DbSet<Customer> Customers { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        public DbSet<Country> Countries { get; set; }
+
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 

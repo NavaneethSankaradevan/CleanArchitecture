@@ -17,9 +17,12 @@ namespace MSF.API
 {
 	public class Startup
 	{
-		public Startup(IConfiguration configuration)
+		private readonly IWebHostEnvironment env;
+
+		public Startup(IConfiguration configuration, IWebHostEnvironment env)
 		{
 			Configuration = configuration;
+			this.env = env;
 		}
 
 		public IConfiguration Configuration { get; }
@@ -30,10 +33,21 @@ namespace MSF.API
 
 			ConfigureAuthentication(services);
 
-			// Resolve DbContext dependencies.
-			services.ConfigureDataContext(
-				user => user.UseSqlServer(Configuration.GetConnectionString("LoginConnection")),
-				tran => tran.UseSqlServer(Configuration.GetConnectionString("TranDbConnection")));
+			services.ConfigureDataContext(userDb => userDb.UseInMemoryDatabase("UserDb"), tranDb => tranDb.UseInMemoryDatabase("TranDb"));
+
+			if (env.IsDevelopment())
+			{
+				services.ConfigureDataContext(
+					userDb => userDb.UseInMemoryDatabase("UserDb"), 
+					tranDb => tranDb.UseInMemoryDatabase("TranDb"));
+			}
+			else
+			{
+				// Resolve DbContext dependencies.
+				services.ConfigureDataContext(
+					user => user.UseSqlServer(Configuration.GetConnectionString("LoginConnection")),
+					tran => tran.UseSqlServer(Configuration.GetConnectionString("TranDbConnection")));
+			}
 
 			// Resolve the service dependencies.
 			services.ConfigureServices();
@@ -41,7 +55,6 @@ namespace MSF.API
 			// Below is required to identity (signinmanager) services to work. 
 			// Since ILogger is no longer registered by default but ILogger<T> is.
 			services.AddLogging(l => l.AddConsole());
-
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
@@ -54,7 +67,7 @@ namespace MSF.API
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+		public void Configure(IApplicationBuilder app)
 		{
 
 			//Configure cross origin request handler

@@ -18,8 +18,18 @@ namespace MSF.Api.Controllers
 
 		// GET: api/countries
 		[HttpGet]
-		public async Task<IActionResult> Get() => Ok(await CountryService.GetCountiresAsync());
-		
+		public async Task<IActionResult> Get()
+		{
+			try
+			{
+				return Ok(await CountryService.GetCountiresAsync());
+			}
+			catch (Exception ex)
+			{ 
+				return StatusCode(500, ex.Message);
+			}
+		}
+
 		// GET: api/countries/5
 		[HttpGet("{id:int}")]
 		public async Task<IActionResult> Get(int id)
