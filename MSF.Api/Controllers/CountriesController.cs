@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MSF.Service;
+using System;
+using System.Threading.Tasks;
 
 namespace MSF.Api.Controllers
 {
@@ -6,36 +9,33 @@ namespace MSF.Api.Controllers
 	[ApiController]
 	public class CountriesController : ControllerBase
 	{
-		//private readonly ICountryService CountryService;
+		private readonly ICountryService CountryService;
 
-		//public CountriesController(ICountryService countryService)
-		//{
-		//    this.CountryService = countryService;
-		//}
+		public CountriesController(ICountryService countryService)
+		{
+			this.CountryService = countryService;
+		}
 
-		//// GET: api/countries
-		//[HttpGet]
-		//public async Task<IActionResult> Get()
-		//{
-		//    return Ok(await CountryService.GetAllAsync());
-		//}
-
-		//// GET: api/countries/5
-		//[HttpGet("{id:int}")]
-		//public async Task<IActionResult> Get(int id)
-		//{
-		//    try
-		//    {
-		//        var product = await CountryService.GetAsync(id);
-		//        if (product != null)
-		//            return Ok(product);
-		//        else
-		//            throw new Exception("Not Found");
-		//    }
-		//    catch (Exception ex)
-		//    {
-		//        return StatusCode(500, ex.Message);
-		//    }
-		//}
+		// GET: api/countries
+		[HttpGet]
+		public async Task<IActionResult> Get() => Ok(await CountryService.GetCountiresAsync());
+		
+		// GET: api/countries/5
+		[HttpGet("{id:int}")]
+		public async Task<IActionResult> Get(int id)
+		{
+			try
+			{
+				var product = await CountryService.GetCountryByIdAsync(id);
+				if (product != null)
+					return Ok(product);
+				else
+					throw new Exception("Not Found");
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, ex.Message);
+			}
+		}
 	}
 }

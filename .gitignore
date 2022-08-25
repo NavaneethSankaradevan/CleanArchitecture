@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/MSF.Api/bin/Debug/net6.0
+/MSF.Application/bin/Debug/net6.0
+/MSF.Application/obj
+/MSF.Api/obj
+/MSF.Domain/bin/Debug/net6.0
+/MSF.Domain/obj
+/MSF.Service/bin/Debug/net6.0
+/MSF.Service/obj
+/MSF.UI/bin/Debug/net6.0
+/MSF.UI/obj
+/NUnitTest/bin/Debug/net6.0
+/NUnitTest/obj
