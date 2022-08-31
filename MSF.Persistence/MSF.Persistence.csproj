@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <AssemblyName>MSF.Application</AssemblyName>
-    <RootNamespace>MSF.Application</RootNamespace>
+    <AssemblyName>MSF.Persistence</AssemblyName>
+    <RootNamespace>MSF.Persistence</RootNamespace>
   </PropertyGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties DependencyConfig_1json__JSONSchema="http://json.schemastore.org/config" /></VisualStudio></ProjectExtensions>

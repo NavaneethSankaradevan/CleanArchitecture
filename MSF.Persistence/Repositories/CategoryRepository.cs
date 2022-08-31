@@ -1,7 +1,7 @@
 ﻿using MSF.Domain;
 using Core.Data;
 
-namespace MSF.Application
+namespace MSF.Persistence
 {
 	public interface ICategoryRepository : IRepository<Category, int> { }
 

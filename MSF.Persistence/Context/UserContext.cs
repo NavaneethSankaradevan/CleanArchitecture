@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace MSF.Application
+namespace MSF.Persistence
 {
     internal class UserContext : IdentityDbContext<AppUser>
     {

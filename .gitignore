@@ -15,3 +15,5 @@
 /MSF.UI/obj
 /NUnitTest/bin/Debug/net6.0
 /NUnitTest/obj
+/MSF.Persistence/bin/Debug
+/MSF.Persistence/obj

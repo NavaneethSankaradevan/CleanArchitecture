@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using MSF.Domain;
 using Microsoft.Extensions.Logging;
 
-namespace MSF.Application
+namespace MSF.Persistence
 {
 	public interface IProductRepository : IRepository<Product, long> { }
 

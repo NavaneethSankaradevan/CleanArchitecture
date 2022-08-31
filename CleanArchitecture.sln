@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitTest.Service", "NUnitT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSF.Api", "MSF.API\MSF.Api.csproj", "{338F05BE-480B-4326-B47D-AB2874498576}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSF.Application", "MSF.Application\MSF.Application.csproj", "{9406C65A-F7A5-42AB-B607-4FC652FC170D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSF.Persistence", "MSF.Persistence\MSF.Persistence.csproj", "{B6895B87-4B4F-4CB1-9143-B1D01705F1B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{338F05BE-480B-4326-B47D-AB2874498576}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{338F05BE-480B-4326-B47D-AB2874498576}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{338F05BE-480B-4326-B47D-AB2874498576}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9406C65A-F7A5-42AB-B607-4FC652FC170D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9406C65A-F7A5-42AB-B607-4FC652FC170D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9406C65A-F7A5-42AB-B607-4FC652FC170D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9406C65A-F7A5-42AB-B607-4FC652FC170D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6895B87-4B4F-4CB1-9143-B1D01705F1B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6895B87-4B4F-4CB1-9143-B1D01705F1B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6895B87-4B4F-4CB1-9143-B1D01705F1B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6895B87-4B4F-4CB1-9143-B1D01705F1B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

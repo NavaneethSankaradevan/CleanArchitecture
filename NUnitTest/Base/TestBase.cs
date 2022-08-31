@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using MSF.Application;
+using MSF.Persistence;
 using MSF.Service;
 using NUnit.Framework;
 
@@ -26,8 +26,7 @@ namespace MSF.UnitTest
 			IServiceCollection services = new ServiceCollection();
 			services.AddSingleton<IConfiguration>(config);
 			services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-			services.ConfigureDataContext(userDb => userDb.UseInMemoryDatabase("UserDb"), tranDb => tranDb.UseInMemoryDatabase("TranDb"));
-			services.ConfigureServices();
+			services.ConfigureServices(config,true);
 			services.AddLogging();
 
 			_serviceProvider = services.BuildServiceProvider();

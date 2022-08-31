@@ -8,12 +8,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
-using MSF.Application;
 using MSF.Service;
+using MSF.Persistence;
 using System.Text;
 using Microsoft.OpenApi.Models;
 
-namespace MSF.API
+namespace MSF.Api
 {
 	public class Startup
 	{
@@ -33,24 +33,8 @@ namespace MSF.API
 
 			ConfigureAuthentication(services);
 
-			services.ConfigureDataContext(userDb => userDb.UseInMemoryDatabase("UserDb"), tranDb => tranDb.UseInMemoryDatabase("TranDb"));
-
-			if (env.IsDevelopment())
-			{
-				services.ConfigureDataContext(
-					userDb => userDb.UseInMemoryDatabase("UserDb"), 
-					tranDb => tranDb.UseInMemoryDatabase("TranDb"));
-			}
-			else
-			{
-				// Resolve DbContext dependencies.
-				services.ConfigureDataContext(
-					user => user.UseSqlServer(Configuration.GetConnectionString("LoginConnection")),
-					tran => tran.UseSqlServer(Configuration.GetConnectionString("TranDbConnection")));
-			}
-
 			// Resolve the service dependencies.
-			services.ConfigureServices();
+			services.ConfigureServices(Configuration,env.IsDevelopment());
 
 			// Below is required to identity (signinmanager) services to work. 
 			// Since ILogger is no longer registered by default but ILogger<T> is.

@@ -9,7 +9,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.Loader;
 
-namespace MSF.Application
+namespace MSF.Persistence
 {
 	public static class DependencyHandler
     {
@@ -21,7 +21,9 @@ namespace MSF.Application
 		/// </summary>
 		/// <param name="userDbOption">User DB Option</param>
 		/// <param name="tranDbOption">Transaction DB Option</param>
-		public static void ConfigureDataContext(this IServiceCollection services, Action<DbContextOptionsBuilder> userDbOption, Action<DbContextOptionsBuilder> tranDbOption)
+		public static void ConfigureDataContext(this IServiceCollection services, 
+			Action<DbContextOptionsBuilder> userDbOption, 
+			Action<DbContextOptionsBuilder> tranDbOption)
 		{
 
 			if (isConfigured) return;

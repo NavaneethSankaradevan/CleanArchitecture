@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace MSF.API
+namespace MSF.Api
 {
 	public class Program
 	{

@@ -20,7 +20,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MSF.Domain\MSF.Domain.csproj" />
-    <ProjectReference Include="..\MSF.Application\MSF.Application.csproj" />
+    <ProjectReference Include="..\MSF.Application\MSF.Persistence.csproj" />
+    <ProjectReference Include="..\MSF.Persistence\MSF.Persistence.csproj" />
     <ProjectReference Include="..\MSF.Service\MSF.Service.csproj" />
   </ItemGroup>
 

@@ -3,7 +3,7 @@ using Microsoft.Extensions.Options;
 using MSF.Service;
 using System.Threading.Tasks;
 
-namespace MSF.API
+namespace MSF.Api
 {
 
 	/// <summary>

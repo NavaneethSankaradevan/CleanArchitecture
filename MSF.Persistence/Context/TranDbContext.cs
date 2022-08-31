@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MSF.Domain;
 
-namespace MSF.Application
+namespace MSF.Persistence
 {
     internal class TranDbContext : DbContext
     {

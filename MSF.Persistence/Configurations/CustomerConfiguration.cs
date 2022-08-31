@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace MSF.Application
+namespace MSF.Persistence
 {
     internal class CustomerConfiguration : PersonConfiguration<Customer>
     {
