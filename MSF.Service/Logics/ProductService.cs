@@ -11,9 +11,9 @@ namespace MSF.Service
     public interface IProductService
     {
 
-        Task<List<ProductGetViewModel>> GetProducts();
+        Task<IEnumerable<ProductGetViewModel>> GetProducts();
 
-        Task<List<ProductGetViewModel>> GetProductsForPage(int pageNo, int recordCount);
+        Task<PageResult<ProductGetViewModel,long>> GetProductsForPage(int PageNo, int PageCount);
 
         Task<ProductGetViewModel> GetProductById(long Id);
 
@@ -43,20 +43,20 @@ namespace MSF.Service
 
         async Task<ProductGetViewModel> IProductService.GetProductById(long Id) => await productRepository.GetAsync(Id);
         
-        async Task<List<ProductGetViewModel>> IProductService.GetProducts()
+        async Task<IEnumerable<ProductGetViewModel>> IProductService.GetProducts()
         {
             var products = await productRepository.GetAllAsync();
             return products.Select(p => (ProductGetViewModel)p).ToList();
         }
 
-        async Task<List<ProductGetViewModel>> IProductService.GetProductsForPage(int pageNo, int recordCount)
+        async Task<IEnumerable<ProductGetViewModel>> IProductService.GetProductsForPage(int PageNo, int PageCount)
         {
-
             // Default paging logic.
-            pageNo = pageNo > 0 ? pageNo - 1 : 0;
+            PageNo = PageNo > 0 ? PageNo - 1 : 0;
 
-            var products = await productRepository.GetAllPageData(p => p.ProductName, pageNo, recordCount);
-            return products.Select(p => (ProductGetViewModel)p).ToList();
+            var products = await productRepository.GetAllPageData(p => p.ProductName, PageNo, PageCount);
+
+            return products.EntityList.Select(p => (ProductGetViewModel)p);
         }
 
         async Task<ProductGetViewModel> IProductService.SaveProduct(ProductViewModel product,string user)

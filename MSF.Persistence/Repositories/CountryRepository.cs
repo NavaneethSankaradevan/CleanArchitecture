@@ -8,13 +8,13 @@ using System.Text;
 namespace MSF.Persistence
 {
 
-    public interface ICountryRepository:IReadRepository<Country, int> { }
+	public interface ICountryRepository : IReadRepository<Country, int> { }
 
-    internal class CountryRepository : BaseRepository<Country, int>, ICountryRepository
-    {
-        public CountryRepository(IUnitOfWork unitOfWork) : base(unitOfWork)
-        {
+	internal class CountryRepository : BaseRepository<Country, int>, ICountryRepository
+	{
+		public CountryRepository(IUnitOfWork unitOfWork) : base(unitOfWork)
+		{
 
-        }
-    }
+		}
+	}
 }

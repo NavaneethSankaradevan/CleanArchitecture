@@ -3,7 +3,7 @@ using Core.Data;
 
 namespace MSF.Domain
 {
-	public class Product : BaseEntity<long>
+	public class Product : BaseEntityState<long>
 	{
 
         public string ProductCode { get; set; }

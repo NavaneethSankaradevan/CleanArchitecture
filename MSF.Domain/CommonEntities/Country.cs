@@ -7,6 +7,7 @@ namespace MSF.Domain
 {
     public class Country: BaseEntity<int>
     {
+        public string CountryCode { get; set; }
         public string CountryName { get; set; }
     }
 }
